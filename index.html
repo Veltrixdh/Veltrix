@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     />
     <link
       rel="stylesheet"
@@ -57,15 +57,28 @@
         </a>
 
         <nav id="main-nav" class="nav" aria-label="Principal">
-          <a href="#servicios">Servicios</a>
-          <a href="#demo">Demo</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#equipo">Equipo</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="#demo" data-i18n="nav.demo">Demo</a>
+          <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+          <a href="#equipo" data-i18n="nav.team">Equipo</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+          <div class="nav__lang-mobile">
+            <span style="font-size:0.875rem; color:var(--text-muted);">Idioma / Language:</span>
+            <div class="lang-switch" role="group" aria-label="Idioma móvil">
+              <button type="button" class="lang-btn active" data-lang="es">ES</button>
+              <span class="lang-divider" aria-hidden="true">|</span>
+              <button type="button" class="lang-btn" data-lang="en">EN</button>
+            </div>
+          </div>
         </nav>
 
         <div class="header-actions">
-          <a href="#contacto" class="btn btn--primary btn--sm">Hablemos</a>
+          <div class="lang-switch" role="group" aria-label="Idioma / Language">
+            <button type="button" class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          </div>
+          <a href="#contacto" class="btn btn--primary btn--sm" data-i18n="nav.talk">Hablemos</a>
           <button
             type="button"
             id="menu-toggle"
@@ -85,21 +98,21 @@
         <div>
           <span class="badge">
             <span class="badge__dot" aria-hidden="true"></span>
-            Ingeniería de software de alto rendimiento
+            <span data-i18n="hero.badge">Ingeniería de software de alto rendimiento</span>
           </span>
-          <h1 class="hero__title">
+          <h1 class="hero__title" data-i18n="hero.title">
             Construimos el <span class="glow-text">software</span> del futuro.
           </h1>
-          <p class="hero__lead">
+          <p class="hero__lead" data-i18n="hero.lead">
             Veltrix diseña y desarrolla productos digitales a medida: apps,
             plataformas e IA que escalan a la velocidad de tu ambición.
           </p>
           <div class="hero__actions">
-            <a href="#contacto" class="btn btn--primary btn--lg btn--glow">
+            <a href="#contacto" class="btn btn--primary btn--lg btn--glow" data-i18n="hero.start">
               Iniciar proyecto
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="#servicios" class="btn btn--ghost btn--lg">
+            <a href="#servicios" class="btn btn--ghost btn--lg" data-i18n="hero.services">
               <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
               Ver servicios
             </a>
@@ -121,10 +134,10 @@
             />
           </div>
           <div class="float-card float-card--top">
-            <i class="fa-solid fa-clock text-cyan" aria-hidden="true"></i>Respuesta en 24 h
+            <i class="fa-solid fa-clock text-cyan" aria-hidden="true"></i><span data-i18n="hero.floatTime">Respuesta en 24 h</span>
           </div>
           <div class="float-card float-card--bottom">
-            <i class="fa-solid fa-file-invoice-dollar text-blue" aria-hidden="true"></i>Presupuesto sin costo
+            <i class="fa-solid fa-file-invoice-dollar text-blue" aria-hidden="true"></i><span data-i18n="hero.floatQuote">Presupuesto sin costo</span>
           </div>
         </div>
       </section>
@@ -132,20 +145,24 @@
       <section id="tech" class="marquee" aria-label="Tecnologías que usamos">
         <div class="marquee__track">
           <ul class="marquee__group">
+            <li><i class="fa-brands fa-java" aria-hidden="true"></i>Java</li>
+            <li><i class="fa-solid fa-leaf" aria-hidden="true"></i>Spring Boot</li>
+            <li><i class="fa-brands fa-js" aria-hidden="true"></i>JavaScript</li>
             <li><i class="fa-brands fa-react" aria-hidden="true"></i>React</li>
             <li><i class="fa-brands fa-node-js" aria-hidden="true"></i>Node.js</li>
             <li><i class="fa-brands fa-python" aria-hidden="true"></i>Python</li>
-            <li><i class="fa-brands fa-aws" aria-hidden="true"></i>AWS</li>
             <li><i class="fa-brands fa-docker" aria-hidden="true"></i>Docker</li>
             <li><i class="fa-brands fa-swift" aria-hidden="true"></i>Swift</li>
             <li><i class="fa-brands fa-android" aria-hidden="true"></i>Android</li>
             <li><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</li>
           </ul>
           <ul class="marquee__group" aria-hidden="true">
+            <li><i class="fa-brands fa-java"></i>Java</li>
+            <li><i class="fa-solid fa-leaf"></i>Spring Boot</li>
+            <li><i class="fa-brands fa-js"></i>JavaScript</li>
             <li><i class="fa-brands fa-react"></i>React</li>
             <li><i class="fa-brands fa-node-js"></i>Node.js</li>
             <li><i class="fa-brands fa-python"></i>Python</li>
-            <li><i class="fa-brands fa-aws"></i>AWS</li>
             <li><i class="fa-brands fa-docker"></i>Docker</li>
             <li><i class="fa-brands fa-swift"></i>Swift</li>
             <li><i class="fa-brands fa-android"></i>Android</li>
@@ -156,8 +173,8 @@
 
       <section id="servicios" class="container section section--lg">
         <div class="reveal section-head">
-          <p class="eyebrow">Servicios</p>
-          <h2 class="section-title">Todo lo que tu producto necesita</h2>
+          <p class="eyebrow" data-i18n="services.eyebrow">Servicios</p>
+          <h2 class="section-title" data-i18n="services.title">Todo lo que tu producto necesita</h2>
           <div class="divider" aria-hidden="true"></div>
         </div>
         <div class="services-grid">
@@ -165,8 +182,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
-            <h3 class="card__title">Desarrollo web</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s1Title">Desarrollo web</h3>
+            <p class="card__text" data-i18n="services.s1Text">
               Plataformas y SaaS rápidos, seguros y listos para escalar.
             </p>
           </article>
@@ -174,8 +191,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-mobile-screen"></i>
             </div>
-            <h3 class="card__title">Apps móviles</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s2Title">Apps móviles</h3>
+            <p class="card__text" data-i18n="services.s2Text">
               iOS y Android con experiencias fluidas y nativas.
             </p>
           </article>
@@ -183,8 +200,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-brain"></i>
             </div>
-            <h3 class="card__title">IA y datos</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s3Title">IA y datos</h3>
+            <p class="card__text" data-i18n="services.s3Text">
               Modelos, automatización y analítica que impulsan decisiones.
             </p>
           </article>
@@ -192,8 +209,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-cloud"></i>
             </div>
-            <h3 class="card__title">Cloud y DevOps</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s4Title">Cloud y DevOps</h3>
+            <p class="card__text" data-i18n="services.s4Text">
               Infraestructura automatizada, CI/CD y observabilidad.
             </p>
           </article>
@@ -201,8 +218,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-pen-ruler"></i>
             </div>
-            <h3 class="card__title">UX/UI Design</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s5Title">UX/UI Design</h3>
+            <p class="card__text" data-i18n="services.s5Text">
               Interfaces memorables diseñadas alrededor de tus usuarios.
             </p>
           </article>
@@ -210,8 +227,8 @@
             <div class="card__icon" aria-hidden="true">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3 class="card__title">Ciberseguridad</h3>
-            <p class="card__text">
+            <h3 class="card__title" data-i18n="services.s6Title">Ciberseguridad</h3>
+            <p class="card__text" data-i18n="services.s6Text">
               Auditorías y arquitectura segura desde el primer commit.
             </p>
           </article>
@@ -220,11 +237,10 @@
 
       <section id="demo" class="container container--narrow section">
         <div class="reveal section-head">
-          <p class="eyebrow">Demo · WhatsApp</p>
-          <h2 class="section-title">Pruébalo tú mismo</h2>
-          <p class="section-lead">
-            Toca una opción y mira cómo respondería un asistente automático. Lo
-            adaptamos a los procesos reales de tu negocio.
+          <p class="eyebrow" data-i18n="demo.eyebrow">Demo · Asistente IA</p>
+          <h2 class="section-title" data-i18n="demo.title">Pruébalo tú mismo</h2>
+          <p class="section-lead" data-i18n="demo.lead">
+            Toca una opción o escribe tu mensaje para ver cómo respondería un asistente inteligente adaptado a tu negocio.
           </p>
           <div class="divider" aria-hidden="true"></div>
         </div>
@@ -237,45 +253,104 @@
           <div class="demo-halo" aria-hidden="true"></div>
 
           <div class="phone-float">
-            <div class="phone">
-              <div class="phone__screen">
-                <div class="phone__bar">
-                  <span class="phone__avatar">
-                    <img src="./img/veltrix-v.png" alt="" />
-                  </span>
-                  <div>
-                    <strong class="phone__name">Tu negocio</strong>
-                    <span class="phone__status">● asistente automático · ejemplo</span>
+            <div class="iphone14">
+              <!-- Botones físicos laterales iPhone 14 -->
+              <span class="iphone14__btn-silence" aria-hidden="true"></span>
+              <span class="iphone14__btn-vol-up" aria-hidden="true"></span>
+              <span class="iphone14__btn-vol-down" aria-hidden="true"></span>
+              <span class="iphone14__btn-power" aria-hidden="true"></span>
+
+              <div class="iphone14__screen">
+                <!-- Barra superior con Notch iPhone 14 -->
+                <div class="iphone14__notch-bar" aria-hidden="true">
+                  <span class="iphone14__time">9:41</span>
+                  <div class="iphone14__notch">
+                    <span class="iphone14__speaker"></span>
+                    <span class="iphone14__lens"></span>
+                  </div>
+                  <div class="iphone14__icons">
+                    <span class="iphone14__net">5G</span>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
                   </div>
                 </div>
+
+                <div class="phone__app-bar">
+                  <div class="phone__contact">
+                    <span class="phone__avatar">
+                      <img src="./img/veltrix-v.png" alt="Veltrix" />
+                    </span>
+                    <div class="phone__contact-info">
+                      <strong class="phone__name">Veltrix AI Assistant</strong>
+                      <span class="phone__status">
+                        <span class="status-pulse" aria-hidden="true"></span>
+                        <span data-i18n="demo.status">En línea · Respuesta inmediata</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="phone__date-divider" aria-hidden="true">
+                  <span data-i18n="demo.dateDivider">Hoy · Asistente en vivo</span>
+                </div>
+
                 <div
                   id="chat"
                   class="chat"
                   role="log"
                   aria-live="polite"
-                  aria-label="Conversación de ejemplo"
+                  aria-label="Conversación interactiva"
                 >
-                  <div id="typing" class="bubble bot typing">
-                    <span class="sr-only">El asistente está escribiendo…</span>
-                    <span class="tdots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <div id="typing" class="bubble-row bot typing">
+                    <div class="chat-avatar bot" aria-hidden="true">
+                      <img src="./img/veltrix-v.png" alt="" />
+                    </div>
+                    <div class="bubble bot">
+                      <span class="sr-only">El asistente está escribiendo…</span>
+                      <span class="tdots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    </div>
                   </div>
                 </div>
-                <div id="replies" class="replies">
-                  <button type="button" class="qr" data-key="catalogo">
-                    Ver catálogo
+
+                <div class="phone__quick-bar">
+                  <span class="quick-bar-label" data-i18n="demo.quickLabel">Sugerencias rápidas:</span>
+                  <div id="replies" class="replies">
+                    <button type="button" class="qr" data-key="catalogo">
+                      <i class="fa-solid fa-box-open" aria-hidden="true"></i> <span data-i18n="demo.q1">Ver catálogo</span>
+                    </button>
+                    <button type="button" class="qr" data-key="pedido">
+                      <i class="fa-solid fa-truck-fast" aria-hidden="true"></i> <span data-i18n="demo.q2">Estado de pedido</span>
+                    </button>
+                    <button type="button" class="qr" data-key="cita">
+                      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> <span data-i18n="demo.q3">Agendar cita</span>
+                    </button>
+                    <button type="button" class="qr" data-key="persona">
+                      <i class="fa-solid fa-user-headset" aria-hidden="true"></i> <span data-i18n="demo.q4">Hablar con asesor</span>
+                    </button>
+                    <button type="button" class="qr qr--reset" id="reset" title="Reiniciar chat">
+                      <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <form id="chat-input-form" class="phone__composer" autocomplete="off">
+                  <input
+                    type="text"
+                    id="chat-user-input"
+                    class="composer-input"
+                    placeholder="Escribe un mensaje..."
+                    data-i18n-placeholder="demo.inputPlaceholder"
+                    aria-label="Mensaje para el asistente"
+                  />
+                  <button type="submit" class="composer-send" aria-label="Enviar mensaje">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                   </button>
-                  <button type="button" class="qr" data-key="pedido">
-                    Estado de mi pedido
-                  </button>
-                  <button type="button" class="qr" data-key="cita">
-                    Agendar una cita
-                  </button>
-                  <button type="button" class="qr" data-key="persona">
-                    Hablar con una persona
-                  </button>
-                  <button type="button" class="qr qr--reset" id="reset">
-                    Reiniciar
-                  </button>
+                </form>
+
+                <!-- Barra inferior iOS Home Indicator -->
+                <div class="iphone14__home-indicator" aria-hidden="true">
+                  <span class="iphone14__home-bar"></span>
                 </div>
               </div>
             </div>
@@ -285,189 +360,87 @@
 
       <section id="proyectos" class="section" aria-labelledby="proyectos-title">
         <div class="container reveal section-head">
-          <p class="eyebrow">Proyectos</p>
-          <h2 id="proyectos-title" class="section-title">Lo que construimos</h2>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Proyectos</p>
+          <h2 id="proyectos-title" class="section-title" data-i18n="projects.title">Lo que construimos</h2>
           <div class="divider" aria-hidden="true"></div>
-          <p class="projects__note">
-            Proyectos conceptuales que muestran el tipo de soluciones que
-            desarrollamos con nuestro equipo.
+          <p class="projects__note" data-i18n="projects.note">
+            Proyectos reales en producción desarrollados y desplegados por nuestro equipo.
           </p>
         </div>
 
-        <div class="reveal projects">
-        <div class="projects-row">
-          <div class="projects-row__track">
-            <ul class="projects-row__group">
-            <li class="project project--blue">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-truck-fast project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
+        <div class="reveal projects-showcase">
+          <!-- Tarjeta 1: HireConnect -->
+          <article class="project-card project-card--hireconnect">
+            <a href="https://hireconnect-expo-cngvhrc4ahere6fp.spaincentral-01.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="Visitar HireConnect en vivo">
+              <div class="project-card__media">
+                <div class="project-card__badge-bar">
+                  <span class="project-card__status"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span data-i18n="projects.badgeLive">En vivo</span></span>
+                  <span class="project-card__platform" data-i18n="projects.hireCategory">Plataforma Web</span>
                 </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">App móvil</span>
-                  <span class="project__badge">Concepto</span>
+                <div class="project-card__logo-wrap">
+                  <img src="./img/hireconnect-logo.png" alt="HireConnect Logo" class="project-card__brand-logo" />
                 </div>
-                <h3 class="project__title">RutaXpress</h3>
-                <p class="project__text">Seguimiento de envíos en tiempo real para repartidores y clientes.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>React Native</li><li>Node.js</li></ul>
               </div>
-            </li>
-            <li class="project project--cyan">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-heart-pulse project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
+              <div class="project-card__body">
+                <div class="project-card__header">
+                  <h3 class="project-card__title">HireConnect</h3>
+                  <span class="project-card__cta-btn">
+                    <span data-i18n="projects.visitSite">Visitar sitio</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </span>
                 </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">Plataforma web</span>
-                  <span class="project__badge">Concepto</span>
+                <p class="project-card__desc" data-i18n="projects.hireDesc">
+                  Plataforma de evaluación y selección de talento para reclutadores desplegada en Azure.
+                </p>
+                <div class="project-card__footer">
+                  <ul class="project__tags" aria-label="Tecnologías">
+                    <li>Azure</li><li>React</li><li>Node.js</li><li>AI / Python</li>
+                  </ul>
                 </div>
-                <h3 class="project__title">Clínica Vida</h3>
-                <p class="project__text">Agenda de citas médicas con recordatorios automáticos por WhatsApp.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>React</li><li>Python</li></ul>
               </div>
-            </li>
-            <li class="project project--emerald">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-chart-line project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
+            </a>
+          </article>
+
+          <!-- Tarjeta 2: Mercatto -->
+          <article class="project-card project-card--mercatto">
+            <a href="https://mercatto-ashy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card__link" aria-label="Visitar Mercatto en vivo">
+              <div class="project-card__media">
+                <div class="project-card__badge-bar">
+                  <span class="project-card__status"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span data-i18n="projects.badgeLive">En vivo</span></span>
+                  <span class="project-card__platform" data-i18n="projects.mercattoCategory">Marketplace</span>
                 </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">SaaS</span>
-                  <span class="project__badge">Concepto</span>
+                <div class="project-card__logo-wrap">
+                  <img src="./img/mercatto-logo.svg" alt="Mercatto Logo" class="project-card__brand-logo" />
                 </div>
-                <h3 class="project__title">FinPilot</h3>
-                <p class="project__text">Panel financiero que reúne ventas, gastos y flujo de caja en un solo lugar.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>React</li><li>AWS</li></ul>
               </div>
-            </li>
-            <li class="project project--violet">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-robot project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
+              <div class="project-card__body">
+                <div class="project-card__header">
+                  <h3 class="project-card__title">Mercatto</h3>
+                  <span class="project-card__cta-btn">
+                    <span data-i18n="projects.visitSite">Visitar sitio</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </span>
                 </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">Automatización IA</span>
-                  <span class="project__badge">Concepto</span>
+                <p class="project-card__desc" data-i18n="projects.mercattoDesc">
+                  Marketplace multi-vendedor con pasarela de pagos Wompi Bancolombia y despliegue en Vercel.
+                </p>
+                <div class="project-card__footer">
+                  <ul class="project__tags" aria-label="Tecnologías">
+                    <li>Next.js</li><li>Vercel</li><li>Wompi</li><li>Tailwind CSS</li>
+                  </ul>
                 </div>
-                <h3 class="project__title">MesaBot</h3>
-                <p class="project__text">Asistente que toma pedidos y reservas para restaurantes las 24 horas.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>Python</li><li>OpenAI</li></ul>
               </div>
-            </li>
-            </ul>
-          </div>
-        </div>
-        <div class="projects-row">
-          <div class="projects-row__track projects-row__track--reverse">
-            <ul class="projects-row__group">
-            <li class="project project--emerald">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-seedling project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
-                </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">IoT</span>
-                  <span class="project__badge">Concepto</span>
-                </div>
-                <h3 class="project__title">AgroSense</h3>
-                <p class="project__text">Sensores y alertas para monitorear humedad y temperatura de cultivos.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>Python</li><li>Docker</li></ul>
-              </div>
-            </li>
-            <li class="project project--violet">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-bag-shopping project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
-                </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">E-commerce</span>
-                  <span class="project__badge">Concepto</span>
-                </div>
-                <h3 class="project__title">Tienda Nómada</h3>
-                <p class="project__text">Tienda en línea con pagos, inventario y envíos integrados.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>Next.js</li><li>Stripe</li></ul>
-              </div>
-            </li>
-            <li class="project project--blue">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-graduation-cap project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
-                </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">Plataforma educativa</span>
-                  <span class="project__badge">Concepto</span>
-                </div>
-                <h3 class="project__title">EduLab</h3>
-                <p class="project__text">Cursos en video, evaluaciones y certificados para academias.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>React</li><li>Node.js</li></ul>
-              </div>
-            </li>
-            <li class="project project--cyan">
-              <div class="project__screen" aria-hidden="true">
-                <div class="project__bar"><span></span><span></span><span></span></div>
-                <div class="project__ui">
-                  <i class="fa-solid fa-dumbbell project__icon"></i>
-                  <div class="project__lines"><span></span><span></span></div>
-                </div>
-                <div class="project__chart"><span></span><span></span><span></span><span></span><span></span></div>
-              </div>
-              <div class="project__body">
-                <div class="project__meta">
-                  <span class="project__category">App móvil</span>
-                  <span class="project__badge">Concepto</span>
-                </div>
-                <h3 class="project__title">PulsoFit</h3>
-                <p class="project__text">Rutinas, progreso y pagos de membresía para gimnasios.</p>
-                <ul class="project__tags" aria-label="Tecnologías"><li>Swift</li><li>Android</li></ul>
-              </div>
-            </li>
-            </ul>
-          </div>
-        </div>
+            </a>
+          </article>
         </div>
       </section>
 
       <section id="equipo" class="container section" aria-labelledby="equipo-title">
         <div class="reveal section-head">
-          <p class="eyebrow">Equipo</p>
-          <h2 id="equipo-title" class="section-title">Las personas detrás de Veltrix</h2>
+          <p class="eyebrow" data-i18n="team.eyebrow">Equipo</p>
+          <h2 id="equipo-title" class="section-title" data-i18n="team.title">Las personas detrás de Veltrix</h2>
           <div class="divider" aria-hidden="true"></div>
-          <p class="team__note">
+          <p class="team__note" data-i18n="team.note">
             Un equipo pequeño que trabaja directamente contigo, sin
             intermediarios, desde la primera llamada hasta la entrega.
           </p>
@@ -479,8 +452,8 @@
               <div class="member__avatar" aria-hidden="true">HB</div>
             </div>
             <h3 class="card__title member__name">Holman Berdugo</h3>
-            <p class="member__role">Desarrollador Full Stack</p>
-            <p class="card__text member__text">Tres años programando en Java durante su formación universitaria. Construye aplicaciones completas: desde la base de datos hasta la interfaz.</p>
+            <p class="member__role" data-i18n="team.m1Role">Desarrollador Full Stack</p>
+            <p class="card__text member__text" data-i18n="team.m1Bio">Tres años programando en Java durante su formación universitaria. Construye aplicaciones completas: desde la base de datos hasta la interfaz.</p>
             <ul class="member__skills" aria-label="Habilidades"><li>Java</li><li>Python</li><li>SQL</li><li>NoSQL</li><li>HTML/CSS</li></ul>
           </article>
           <article class="reveal lift card card--glow member">
@@ -488,29 +461,28 @@
               <div class="member__avatar" aria-hidden="true">DJ</div>
             </div>
             <h3 class="card__title member__name">Diego Jiménez</h3>
-            <p class="member__role">Automatizaciones y procesos con IA</p>
-            <p class="card__text member__text">Fundador de Veltrix Suite (plataforma ARM). Tres años creando proyectos escalables con IA que eliminan las tareas repetitivas de los negocios.</p>
-            <ul class="member__skills" aria-label="Habilidades"><li>Automatización con IA</li><li>Procesos</li><li>Proyectos escalables</li></ul>
+            <p class="member__role" data-i18n="team.m2Role">Automatizaciones y procesos con IA</p>
+            <p class="card__text member__text" data-i18n="team.m2Bio">Fundador de Veltrix Suite (plataforma ARM). Tres años creando proyectos escalables con IA que eliminan las tareas repetitivas de los negocios.</p>
+            <ul class="member__skills" aria-label="Habilidades"><li data-i18n="team.m2Skill1">Automatización con IA</li><li data-i18n="team.m2Skill2">Procesos</li><li data-i18n="team.m2Skill3">Proyectos escalables</li></ul>
+          </article>
+          <article class="reveal lift card card--glow member">
+            <div class="member__head">
+              <div class="member__avatar" aria-hidden="true">GG</div>
+            </div>
+            <h3 class="card__title member__name" data-i18n="team.m3Name">Gustavo Gonzalez</h3>
+            <p class="member__role" data-i18n="team.m3Role">Desarrollador Full Stack</p>
+            <p class="card__text member__text" data-i18n="team.m3Bio">Estudiante universitario con experiencia en desarrollo full stack. Construye aplicaciones completas y escalables con Java, Spring Boot, JavaScript y React, desde bases de datos hasta la interfaz.</p>
+            <ul class="member__skills" aria-label="Habilidades"><li>Java</li><li>Spring Boot</li><li>JavaScript</li><li>React</li><li>PostgreSQL</li><li>REST APIs</li></ul>
           </article>
           <article class="reveal lift card card--glow member member--placeholder">
             <div class="member__head">
               <div class="member__avatar" aria-hidden="true">?</div>
-              <span class="member__badge">Por confirmar</span>
+              <span class="member__badge" data-i18n="team.m4Badge">Por confirmar</span>
             </div>
-            <h3 class="card__title member__name">Nombre por confirmar</h3>
-            <p class="member__role">Diseño UX/UI</p>
-            <p class="card__text member__text">Perfil de ejemplo. Aquí irá la experiencia de la persona encargada del diseño de interfaces.</p>
-            <ul class="member__skills" aria-label="Habilidades"><li>Figma</li><li>Prototipos</li></ul>
-          </article>
-          <article class="reveal lift card card--glow member member--placeholder">
-            <div class="member__head">
-              <div class="member__avatar" aria-hidden="true">?</div>
-              <span class="member__badge">Por confirmar</span>
-            </div>
-            <h3 class="card__title member__name">Nombre por confirmar</h3>
-            <p class="member__role">Desarrollo móvil</p>
-            <p class="card__text member__text">Perfil de ejemplo. Aquí irá la experiencia de la persona encargada de las apps iOS y Android.</p>
-            <ul class="member__skills" aria-label="Habilidades"><li>React Native</li><li>Swift</li></ul>
+            <h3 class="card__title member__name" data-i18n="team.m4Name">Nombre por confirmar</h3>
+            <p class="member__role" data-i18n="team.m4Role">Diseño UX/UI</p>
+            <p class="card__text member__text" data-i18n="team.m4Bio">Perfil de ejemplo. Aquí irá la experiencia de la persona encargada del diseño de interfaces.</p>
+            <ul class="member__skills" aria-label="Habilidades"><li>Figma</li><li data-i18n="team.m4Skill2">Prototipos</li></ul>
           </article>
         </div>
       </section>
@@ -518,8 +490,8 @@
       <section id="contacto" class="container container--narrow section">
         <div class="reveal cta">
           <div class="cta__glow" aria-hidden="true"></div>
-          <h2 class="cta__title">¿Listo para despegar?</h2>
-          <p class="cta__lead">
+          <h2 class="cta__title" data-i18n="cta.title">¿Listo para despegar?</h2>
+          <p class="cta__lead" data-i18n="cta.lead">
             Cuéntanos tu idea y continuamos la conversación por WhatsApp. Te
             respondemos en menos de 24 horas.
           </p>
@@ -532,9 +504,10 @@
               maxlength="500"
               autocomplete="off"
               placeholder="Ej.: una app para gestionar pedidos"
+              data-i18n-placeholder="cta.placeholder"
               class="input"
             />
-            <button type="submit" class="btn btn--primary btn--lg">
+            <button type="submit" class="btn btn--primary btn--lg" data-i18n="cta.btn">
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               Escribir por WhatsApp
             </button>
@@ -550,20 +523,25 @@
           <img src="./img/veltrix-v.png" class="brand__logo" alt="" />
           <span class="brand__name">VELTRIX</span>
         </div>
-        <p>© <span id="year">2026</span> Veltrix. Todos los derechos reservados.</p>
-        <div class="socials">
-          <a data-social="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener" hidden>
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          </a>
-          <a data-social="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener" hidden>
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a data-social="github" aria-label="GitHub" target="_blank" rel="noopener" hidden>
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-          <a data-social="x" aria-label="X (Twitter)" target="_blank" rel="noopener" hidden>
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-          </a>
+        <p>© <span id="year">2026</span> Veltrix. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+        <div class="footer-links">
+          <button type="button" id="faq-footer-open" class="footer-link" data-i18n="footer.faqLink">
+            Preguntas frecuentes
+          </button>
+          <div class="socials">
+            <a data-social="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener" hidden>
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a data-social="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener" hidden>
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a data-social="github" aria-label="GitHub" target="_blank" rel="noopener" hidden>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a data-social="x" aria-label="X (Twitter)" target="_blank" rel="noopener" hidden>
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -576,73 +554,114 @@
       aria-haspopup="dialog"
       aria-controls="faq-panel"
     >
-      <i class="fa-solid fa-question" aria-hidden="true"></i>
+      <span class="faq-fab__badge" aria-hidden="true">
+        <i class="fa-solid fa-circle-question"></i>
+      </span>
+      <span class="faq-fab__label" data-i18n="faq.fabLabel">Preguntas frecuentes</span>
+      <span class="faq-fab__pulse" aria-hidden="true"></span>
     </button>
 
     <dialog id="faq-panel" class="faq" aria-labelledby="faq-title">
       <div class="faq__header">
-        <div>
-          <p class="eyebrow">Ayuda</p>
-          <h2 id="faq-title" class="faq__title">Preguntas frecuentes</h2>
+        <div class="faq__header-content">
+          <div class="faq__pill">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <span data-i18n="faq.pill">Centro de ayuda</span>
+          </div>
+          <h2 id="faq-title" class="faq__title" data-i18n="faq.title">Preguntas frecuentes</h2>
+          <p class="faq__subtitle" data-i18n="faq.subtitle">Todo lo que necesitas saber antes de iniciar tu proyecto.</p>
         </div>
-        <button type="button" id="faq-close" class="faq__close" aria-label="Cerrar">
+        <button type="button" id="faq-close" class="faq__close" aria-label="Cerrar preguntas frecuentes">
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
       <div class="faq__list">
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Cuánto cuesta un proyecto?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q1">¿Cuánto cuesta un proyecto?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Depende del alcance y las funciones que necesites. Después de una primera conversación te enviamos un presupuesto detallado y sin costo, para que sepas exactamente qué incluye.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a1">Depende del alcance y las funciones que necesites. Después de una primera conversación te enviamos un presupuesto detallado y sin costo, para que sepas exactamente qué incluye.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Cuánto tiempo tarda?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q2">¿Cuánto tiempo tarda?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Una landing page suele estar lista en una o dos semanas. Una plataforma web o una app puede tomar entre uno y tres meses, según su complejidad. Antes de empezar acordamos un cronograma contigo.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a2">Una landing page suele estar lista en una o dos semanas. Una plataforma web o una app puede tomar entre uno y tres meses, según su complejidad. Antes de empezar acordamos un cronograma contigo.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Cómo es el proceso de trabajo?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q3">¿Cómo es el proceso de trabajo?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Primero conversamos sobre tu idea, luego te enviamos una propuesta con alcance y precio. Durante el desarrollo ves avances cada semana y, al terminar, publicamos el proyecto y te acompañamos en el lanzamiento.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a3">Primero conversamos sobre tu idea, luego te enviamos una propuesta con alcance y precio. Durante el desarrollo ves avances cada semana y, al terminar, publicamos el proyecto y te acompañamos en el lanzamiento.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿El código y el diseño serán míos?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q4">¿El código y el diseño serán míos?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Sí. Al finalizar el proyecto te entregamos el código fuente, los diseños y todos los accesos, para que tengas el control total de tu producto.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a4">Sí. Al finalizar el proyecto te entregamos el código fuente, los diseños y todos los accesos, para que tengas el control total de tu producto.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Ofrecen soporte después de la entrega?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q5">¿Ofrecen soporte después de la entrega?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Sí. Incluimos un periodo de soporte para corregir cualquier error y, si lo necesitas, acordamos un plan de mantenimiento para nuevas mejoras.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a5">Sí. Incluimos un periodo de soporte para corregir cualquier error y, si lo necesitas, acordamos un plan de mantenimiento para nuevas mejoras.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Trabajan con clientes fuera de Colombia?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q6">¿Trabajan con clientes fuera de Colombia?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Sí. Trabajamos de forma remota con reuniones por videollamada y comunicación directa por WhatsApp, estés donde estés.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a6">Sí. Trabajamos de forma remota con reuniones por videollamada y comunicación directa por WhatsApp, estés donde estés.</p>
+            </div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">
-              ¿Qué necesito para empezar?
-              <i class="fa-solid fa-plus faq__chevron" aria-hidden="true"></i>
+              <span class="faq__q-text" data-i18n="faq.q7">¿Qué necesito para empezar?</span>
+              <span class="faq__chevron-box" aria-hidden="true">
+                <i class="fa-solid fa-plus faq__chevron"></i>
+              </span>
             </summary>
-            <p class="faq__answer">Solo tu idea. No hace falta tener nada técnico definido: te ayudamos a darle forma, priorizar funciones y elegir la mejor tecnología.</p>
+            <div class="faq__answer-box">
+              <p class="faq__answer" data-i18n="faq.a7">Solo tu idea. No hace falta tener nada técnico definido: te ayudamos a darle forma, priorizar funciones y elegir la mejor tecnología.</p>
+            </div>
           </details>
       </div>
       <div class="faq__footer">
-        <p>¿Tienes otra pregunta?</p>
-        <a href="#contacto" id="faq-contact" class="btn btn--primary btn--sm">Escríbenos</a>
+        <div class="faq__footer-info">
+          <strong data-i18n="faq.footerTitle">¿Tienes otra pregunta?</strong>
+          <span data-i18n="faq.footerDesc">Te respondemos por WhatsApp en minutos.</span>
+        </div>
+        <a href="#contacto" id="faq-contact" class="btn btn--primary btn--sm faq__footer-btn" data-i18n="faq.footerBtn">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos
+        </a>
       </div>
     </dialog>
 
